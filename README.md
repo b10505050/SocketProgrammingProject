@@ -86,7 +86,11 @@ What & How can it do :
 				3. 為何 OpenCV 視窗沒顯示或出錯？
 					請確保安裝了支援 GUI 顯示的 OpenCV (build with -D WITH_QT=ON 或 -D WITH_GTK=ON 等)
 					遠端 SSH 可能需要 X11 forwarding 或使用 -DOPENCV_ENABLE_NONFREE=ON 之類設定。
-
+License
+		如無特別說明，可將此專案視為 MIT 或 BSD 開源協議使用。
+		OpenSSL 與 OpenCV 各自遵守其原始授權條款。
+聯絡資訊
+		若有任何問題或建議，歡迎透過 Issue / Pull Request 或 Email 聯繫。
 // ====================================== Instruction for Compiling / Executing =================================================// 
 Before Compile : 
 
@@ -110,5 +114,6 @@ Compile :
 	g++ client.c -o client $(pkg-config --cflags --libs opencv4) -lssl -lcrypto
 
 Execute : 
+
 	./server
 	./client
