@@ -10,6 +10,7 @@
 	7. 串流影片 (STREAM_VIDEO) – Client 讀取影片並以 JPEG 格式壓縮連續傳給 Server，Server 端以 OpenCV 顯示視訊畫面。
 
 環境需求
+
 	1. 作業系統：Linux / macOS (或能執行 POSIX socket + OpenSSL + OpenCV 的環境)
 	2. OpenSSL
 	3. 安裝開發版函式庫（例如 libssl-dev, libcrypto-dev）
@@ -20,6 +21,7 @@
 	8. g++ / clang++ 等，支援 C++11 (或更新)
 
 Project Struct : 
+
 	.
 	├─ server.c                // 伺服器端程式
 	├─ client.c                // 客戶端程式
@@ -87,19 +89,23 @@ What & How can it do :
 
 // ====================================== Instruction for Compiling / Executing =================================================// 
 Before Compile : 
+
 	sudo apt update
 	sudo apt install libopencv-dev
 
 Check OpenCV : 
+
 	pkg-config --modversion opencv4
 	ls /usr/include/opencv4/opencv2
 	pkg-config --cflags opencv4
 	pkg-config --libs opencv4
 
 Generate OpenSLL : 
+
 	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt
 
 Compile : 
+
 	g++ server.c -o server $(pkg-config --cflags --libs opencv4) -lssl -lcrypto
 	g++ client.c -o client $(pkg-config --cflags --libs opencv4) -lssl -lcrypto
 
