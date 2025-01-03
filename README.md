@@ -1,7 +1,10 @@
 # SocketProgrammingProject
 修課學年 : 113-1 
+
 課程名稱 : 計算機網路
+
 開課系所 : 台大資工系
+
 開課教授 : 周承復 教授
 
 這是一個以 C/C++ 寫成的簡易 SocketProgramming 專案，能透過 OpenSSL 與 OpenCV 實現下列功能：
